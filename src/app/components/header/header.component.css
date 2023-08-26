@@ -1,0 +1,40 @@
+/* .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    background-color: black;
+}
+.Logo{
+    color: white;
+    font-weight: bold;
+}
+.navigate{
+    
+    right: 5%;
+}
+.search-button{
+    color: green;
+    height: 35px;
+    width: 65px;
+    border: 2px;
+    border-radius: 7px; 
+    border-color: green;
+    background-color: white;
+    border-style: solid;
+}
+.search-button:hover{
+    background-color: green;
+    color: white;
+}
+.search-button:active{
+    opacity: 0.5;
+}
+.search-input{
+    border-radius: 5px;
+    height: 35px;
+    margin-right: 10px;
+} */
+.userEmail{
+    margin-left: auto;
+}

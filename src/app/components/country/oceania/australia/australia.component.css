@@ -1,0 +1,23 @@
+.intro{
+    position: relative;
+    height: 100vh;
+}
+.opacity-black{
+    position:absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    z-index: 1;
+    opacity: 0.4;
+}
+.image{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+.description{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+

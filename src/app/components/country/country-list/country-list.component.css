@@ -1,0 +1,38 @@
+a{
+    text-decoration: none;
+}
+.country-list{
+    display: flex;
+    margin-top: 30px;
+}
+img{
+    height: 250px;
+    width: 370px;
+}
+img:hover{
+    box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+.country-description{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.country-description-header{
+    font-size: xx-large;
+    font-weight: 500;
+    color: #798DFC;
+    margin-bottom: 20px;
+}
+.country-description-header:hover{
+    text-decoration: underline;
+    font-size: 36px;
+    cursor: pointer;
+}
+.country-description-sub{
+    font-size: medium;
+    font-style: italic;
+}
+hr{
+    color: red;
+
+}

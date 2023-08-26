@@ -1,0 +1,62 @@
+<mat-expansion-panel hideToggle>
+  <mat-expansion-panel-header>
+      <mat-panel-title>
+          Add Country
+      </mat-panel-title>
+  </mat-expansion-panel-header>
+  <form action="" #form = "ngForm" (ngSubmit)="onSubmit(form)">
+      <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input matInput name="name" ngModel>
+      </mat-form-field>
+      <mat-form-field>
+          <mat-label>Continent</mat-label>
+          <mat-select name = "continent" ngModel>
+              <mat-option value="asia">Asia</mat-option>
+              <mat-option value="oceania">Oceania</mat-option>
+              <mat-option value="europe">Europe</mat-option>
+          </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+          <mat-label>Description</mat-label>
+          <textarea rows="5" matInput name="description" ngModel></textarea>
+      </mat-form-field>
+      <input type="file" name="image" (change)="onFileChange($event)" accept="image/*">
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+  </form>
+</mat-expansion-panel>
+
+<mat-expansion-panel hideToggle>
+  <mat-expansion-panel-header>
+      <mat-panel-title>
+          Add Place
+      </mat-panel-title>
+  </mat-expansion-panel-header>
+  <form action="" #form = "ngForm" (ngSubmit)="onSubmit(form)">
+      <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input matInput name="name" ngModel required>
+      </mat-form-field>
+      <mat-form-field>
+          <mat-label>Country</mat-label>
+          <input matInput name="country" ngModel required>
+      </mat-form-field>
+      <mat-form-field>
+          <mat-label>State</mat-label>
+          <input matInput name="state" ngModel required>
+      </mat-form-field>
+      <mat-form-field>
+          <mat-label>Type</mat-label>
+          <mat-select name = "type" ngModel required>
+              <mat-option value="dynamic">Dynamic</mat-option>
+              <mat-option value="peaceful">Peaceful</mat-option>
+              <mat-option value="natural">Natural</mat-option>
+          </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+          <mat-label>Description</mat-label>
+          <textarea rows="5" matInput name="description" ngModel required></textarea>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+  </form>
+</mat-expansion-panel>

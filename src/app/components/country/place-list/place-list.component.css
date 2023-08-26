@@ -1,0 +1,28 @@
+
+.place-list{
+    margin-top: 30px;
+    
+    display: flex;
+}
+img{
+    height: 250px;
+    width: 370px;
+}
+.place-description{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.place-description-header{
+    font-size: xx-large;
+    font-weight: 500;
+    color: #798DFC;
+    margin-bottom: 20px;
+}
+.place-description-sub{
+    font-size: medium;
+    font-style: italic;
+}
+hr{
+    color: red;
+
+}

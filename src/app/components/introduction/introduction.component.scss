@@ -1,0 +1,644 @@
+
+.container-fluid{
+    margin-top: 30px;
+}
+.web-introduction{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image:  url("../../../assets/images/travel.jpg");
+    background-size: cover;
+    background-position: top;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
+}
+.text-box{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    text-align: center;
+}
+@keyframes moveInLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80%{
+        transform: translateX(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moveInRight {
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80%{
+        transform: translateX(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moveInBottom {
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+.btn:link,
+.btn:visited{
+    text-transform: uppercase;
+    padding: 15px 40px;
+    display: inline-block;   
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    color: black;
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+.btn:active{
+    transform: translateY(-1px);
+    background-color: white;
+    color: #777;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+.btn{
+    background-color: white;
+    color: #777;
+}
+.btn::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+.btn-white::after{
+    background-color: white;
+}
+.btn:hover::after{
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+.btn-animated{
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
+}
+
+.heading-primary{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-transform: uppercase;
+}
+.heading-primary-main{
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    margin-left: 35px;
+    animation: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    
+}
+.heading-primary-sub{
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 15px;
+    margin-left: 15px;
+    white-space: nowrap;
+    animation: moveInRight 1s ease-out;
+}
+.section-about{
+    background-color: rgba(211,211,211,.5);
+    padding: 25rem 0;
+}
+.heading-secondary{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    color: transparent;
+    letter-spacing: 2px;
+    transition: all .2s;
+    background-image: linear-gradient(to right,#003973 , #E5E5BE    );
+    background-clip: text;
+    &:hover{
+        transform: skewY(2deg) skewX(15deg);
+        text-shadow: 0.5rem 0.7rem 2rem rgba(0,0,0,0.2);
+    }
+}
+.wrap{
+    text-align: center;
+    margin-bottom: 100px;
+}
+.row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+}
+.col-1{
+    width: 90%;
+    margin-left: 2rem;
+}
+.col-2{
+    width: 90%;
+}
+.heading-tertiary{
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+p{
+    margin-bottom: 3rem;
+}
+.btn-text{
+    &:link,
+    &:visited{
+        font-size: 1.2rem;
+        color:#0000FF;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid #0000FF;
+        padding: 3px;
+        transition: all .2s;
+    }
+    &:hover{
+        background-color: #0000FF;
+        color: white;
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,.5);
+        transform: translateY(-2px);
+        border-radius: 5px;
+    }
+    &:active{
+        box-shadow: 0 .2rem .5rem rgba(0,0,0,.5);
+        transform: translateY(0);
+    }
+}
+.image-group{
+    position: relative;
+    &:hover .image:not(:hover){
+        transform: scale(.9);
+    }
+}
+.image{
+    margin-left: 5rem;
+    width: 50%;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.5);
+    border-radius: 5px;
+    position: absolute;
+    transition: all .2s;
+    &:hover{
+        outline: .7rem solid yellow;
+        outline-offset: 1rem;
+        transform: scale(1.1);
+        box-shadow: 0 1.5rem 2rem rgba(0,0,0,.5);
+        z-index: 2;
+    }
+}
+.photo1{
+    left:0;
+    top: -2rem
+}
+.photo2{
+    top: 3rem;
+    left: 10rem;
+}
+.photo3{
+    top: 6rem;
+    left: -5rem;
+}
+.features-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    transform: skewY(8deg);
+}
+.features{
+    margin-top: -7rem;
+    padding: 20rem 0;
+    background-image:linear-gradient(to left,rgba(52, 143, 80,.7),rgba(86, 180, 211,.7)), url(../../../assets/images/travel_image.jpg);
+    background-size: cover;
+    background-position: center;
+    transform: skewY(-8deg);
+}
+.features-col-1{
+    margin-left: 5%;
+    width: 90%;
+}
+.features-box{
+    
+    background-color:rgba(255,255,255, 0.4);
+    font-size: 1rem;;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+    transition: all .3s;
+    &:hover{
+        transform: translateY(-3rem) scale(1.05);
+    }
+}
+.features-box-icon{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+.section-continents{
+    margin-top: -7rem;
+    background-color: rgba(211,211,211,.5);
+    padding: 25rem 0 50rem 0;
+}
+.continents-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.continents-col{
+    display: flex;
+    justify-content: center;
+}
+.card-center{
+    transform: translateX(-10rem);
+}
+.card{
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    .card_side{
+        width: 20rem;
+        height: 30rem;
+        transition: all 1s ease;
+        position: absolute;
+        backface-visibility: hidden;
+        border-radius: 5px;
+        box-shadow: 0 0.5rem 2rem rgba(0,0,0,.5);
+    }
+    .front{
+        background-color: white;
+    }
+    .back{
+        transform: rotateY(180deg);
+    }
+    .back-1{
+        background-image: linear-gradient(to right, #5AE8E5, #1ecfcb);
+    }
+    .back-2{
+        background-image: linear-gradient(to right, rgba(255, 167, 38), rgba(255, 112, 67));
+    }
+    .back-3{
+        background-image: linear-gradient(to right, rgba(74, 144, 226), rgba(52, 85, 139));
+    }
+    &:hover .front{
+        transform: rotateY(-180deg);
+    }
+    &:hover .back{
+        transform: rotateY(0);
+    }
+}
+.card-picture{
+    background-size: cover;
+    height: 18em;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+.card-picture-1{
+    background-image: linear-gradient(to right, rgba(90, 232, 229,.4), rgba(30, 207, 203,.4)), url(../../../assets/images/oceania.jpg);
+}
+.card-picture-2{
+    background-image: linear-gradient(to right, rgba(255, 167, 38,.4), rgba(255, 112, 67,.4)), url(../../../assets/images/asia.jpg);
+}
+.card-picture-3{
+    background-image: linear-gradient(to right, rgba(74, 144, 226,.4), rgba(52, 85, 139,.4)), url(../../../assets/images/europe.jpg);
+}
+.card-header{
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: white;
+    position: absolute;
+    top: 11rem;
+    right: 0rem;
+}
+.card-header-span-3{
+    background-image: linear-gradient(to right, rgba(74, 144, 226,.6), rgba(52, 85, 139,.6));
+}
+.card-header-span-2{
+    background-image: linear-gradient(to right, rgba(255, 167, 38,.6), rgba(255, 112, 67,.6));
+}
+.card-header-span-1{
+    background-image: linear-gradient(to right, rgba(90, 232, 229,.6), rgba(30, 207, 203,.6));
+}
+.card-details{
+    .card-details-ul{
+        list-style: none;
+       padding-left: 0;
+       width: 80%; 
+       margin: 10px auto;
+       
+       .card-details-li{
+        text-align: center;
+        font-size: 1rem;
+        padding: 0.5rem;
+        &:not(:last-child){
+            border-bottom: 1px solid grey;
+        }
+    }
+    }
+}
+.card-details-ul{
+    list-style: none;
+   padding-left: 0;
+   width: 80%; 
+   margin: 10px auto;
+}
+.card-details-li{
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.5rem;
+    &:not(:last-child){
+        border-bottom: 1px solid grey;
+    }
+}
+.btn-wrap{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .btn-card{
+        width: 200px
+    }
+}
+.section-stories{
+    position: relative;
+    padding: 5rem 0 15rem 0;
+}
+.background-video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: .5;
+    .background-video-content{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.story{
+    width: 70%;
+    margin: 0 auto;
+    box-shadow: 0 2rem 4rem rgba(0,0,0,.2);
+    background-color: rgba(255, 255, 255,.7);
+    border-radius: 5px;
+    padding: 4rem;
+    transform: skewX(-12deg);
+    &:not(:last-child){
+        margin-bottom: 10rem;
+    }
+    & > *{
+        transform: skewX(12deg);
+    }
+    &:hover .story-caption{
+        opacity: 1;
+        transform: translate(-50%,-50%);
+    }
+    &:hover .traveler-image {
+        transform: scale(1);
+        filter: blur(3px) brightness(70%);
+    }
+    &:hover .traveler-image2{
+        transform: scale(1);
+        filter: blur(3px) brightness(70%);
+        transform: translateX(-10px);
+    }
+}
+.story-shape{
+    width: 9rem;
+    height: 9rem;
+    /* background-color: red; */
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    margin-right: 2rem;
+    position: relative;
+}
+.traveler-image{
+    height: 100%;
+    position: absolute;
+    right: -5px;
+    transform: scale(1.2);
+    transition: all .4s;
+}
+.traveler-image2{
+    height: 100%;
+    transform: scale(1.2);
+    transition: all .4s;
+}
+.story-caption{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,20%);
+    color: white;
+    text-transform: uppercase;
+    font-size: 1rem;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+    backface-visibility: hidden;
+}
+
+.section-information{
+    padding: 10rem 0;
+    background-image: linear-gradient(to right bottom,#7F7FD5,#86A8E7,#91EAE4);
+}
+.information{
+    margin: 0 auto;
+    background-image: linear-gradient(110deg, rgba(255,255,255,.8) 0%,rgba(255,255,255,.8) 50%, transparent 50%) ,url(../../../assets/images/booking_image.jpg);
+    background-size: 100%;
+    height: 35rem;
+    width: 80%;
+    border-radius: 3px;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+}
+.information-form{
+    /* position: relative; */
+    width: 50%;
+    padding: 6rem;
+}
+.heading-booking{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+.form{
+    .form-group:not(:last-child){
+        margin-bottom: 2rem;
+    }
+    .form-input{
+        font-size: 1rem;
+        font-family: inherit;
+        padding: 1rem 1.5rem;
+        border-radius: 3px;
+        background-color: rgba(255,255,255,.3);
+        border: none;
+        border-bottom: 3px solid transparent;
+        width: 100%;
+        display: block;
+        &:focus{
+            outline: none;
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
+            border-bottom: #86A8E7 4px solid;
+        }
+        &:focus:invalid{
+            border-bottom: 4px solid red;
+        }
+    }
+}
+.a-tag-information{
+    text-decoration: none;
+    color: black;
+}
+svg{
+    height: 45px;
+    position: absolute;
+     width: 100%;
+     left: 0;
+     top: 0;
+}
+rect{
+    fill: none;
+    stroke: blue;
+    stroke-width: 2;
+    stroke-dasharray: 400 0;
+    transition: all .35s linear;
+}
+.button-information{
+    margin: 30px 18rem;
+    line-height: 45px;
+    align-content: center;
+    text-align: center;
+    width: 120px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .5s;
+    &:hover{
+        font-weight: bold;
+        letter-spacing: 3px;
+    }
+    &:hover rect{
+        stroke-width: 5;
+        stroke-dasharray: 30 300;
+        stroke-dashoffset: 70;
+        transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+} 
+.footer{
+    background-color: darkgrey;
+    padding: 10rem 0;
+    font-size: 1rem;
+    &_logo-box{
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+    &-list{
+        list-style: none;
+        padding-left: 0;
+    }
+    &-item{
+        display: inline-block;
+        &:not(:last-child){
+            margin-right: 1rem;
+        }
+    }
+    &-link{
+        &:link,
+        &:visited{
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+        }
+        &:hover,
+        &:active{
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.4);
+            transform: rotate(5deg) scale(1.3);
+        }
+    }
+    &-navigation{
+        margin: 0 auto;
+        width: fit-content;
+    }
+    &-copyright{
+        width: fit-content;
+        margin-left: 5rem;
+    }  
+}
+
+
+
+
+mat-grid-tile {
+    background: lightblue;
+    font-size: 40px;
+    color: aliceblue;
+    font-style:italic;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.oceania{
+    background-image: url("../../../assets/images/oceania.jpg");
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.4);
+}
+.asia{
+    background-image: url("../../../assets/images/asia.jpg");
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.4);
+}
+.north-america{
+    background-image: url("../../../assets/images/north_america.jpg");
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.4);
+    background-position: cover;
+}
+.south-america{
+    background-image: url("../../../assets/images/south_america.jpeg");
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.4);
+}
+.europe{
+    background-image: url("../../../assets/images/europe.jpg");
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.4);
+}
+.africa{
+    background-image: url("../../../assets/images/africa.jpg");
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.4);
+}
+mat-grid-tile:hover{
+    cursor: pointer;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.1);
+}
+

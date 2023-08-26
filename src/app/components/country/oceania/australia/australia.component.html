@@ -1,0 +1,24 @@
+<div class="intro">
+    <div class="opacity-black"></div>
+    <img class="image" src="../../../assets/images/australia.jpg" alt="">
+    <div class="description">
+        <h1>Australia</h1>
+        <p>Beautiful</p>
+    </div>
+</div>
+<div class="body">
+    <mat-tab-group>
+        <mat-tab label="Dynamic and vibrant city">
+            <app-place-list [place] = "place" [type]="'dynamic'"></app-place-list>
+        </mat-tab>
+        <mat-tab label="Peaceful place">
+             <app-place-list [place] = "place" [type]="'peaceful'"></app-place-list> 
+            </mat-tab>
+        <mat-tab label="Nature and Wildlife"> 
+            <app-place-list [place] = "place" [type]="'natural'"></app-place-list>     
+        </mat-tab>
+    </mat-tab-group>
+</div>
+
+
+

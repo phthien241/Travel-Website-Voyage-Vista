@@ -1,0 +1,13 @@
+<div class="container">
+    <div *ngFor="let country of countries">
+        <div class="country-list">
+            <img [src]= "'data:' + country.image.contentType + ';base64,' + country.image.data" alt="">
+            <div class="country-description">
+                <a href="#" [routerLink] = "[country.name,{data: country.name}]"><div class="country-description-header">{{country.name}}</div></a>
+                <div class="country-description-sub">{{country.description}}</div>
+            </div>
+        </div>
+        <hr>
+    </div> 
+</div>
+

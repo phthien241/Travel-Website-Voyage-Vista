@@ -1,0 +1,12 @@
+<div class="container">
+    <div *ngFor="let place of placeByType">
+        <div class="place-list">
+            <img [src]= place.imagePath alt="">
+            <div class="place-description">
+                <div class="place-description-header">{{place.name}}</div>
+                <div class="place-description-sub">{{place.description}}</div>
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>
