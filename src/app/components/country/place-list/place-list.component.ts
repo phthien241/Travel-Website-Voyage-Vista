@@ -7,7 +7,7 @@ import { PlaceService } from '../place.service';
 @Component({
   selector: 'app-place-list',
   templateUrl: './place-list.component.html',
-  styleUrls: ['./place-list.component.css']
+  styleUrls: ['./place-list.component.scss']
 })
 export class PlaceListComponent implements OnInit {
   @Input() place: Place[];
