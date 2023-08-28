@@ -40,8 +40,4 @@ export class InformationService {
       this.informationUpdated.next([...this.information]);
     })
   }
-  // ngOnInit(): void {
-  //   console.log("hehe");
-
-  // }
 }

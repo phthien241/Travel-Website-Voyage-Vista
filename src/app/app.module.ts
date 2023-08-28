@@ -9,8 +9,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { IntroductionComponent } from './components/introduction/introduction.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatGridListModule} from '@angular/material/grid-list';
-import { OceaniaComponent } from './components/continents/oceania/oceania.component';
-import { AsiaComponent } from './components/continents/asia/asia.component';
 import { CountryListComponent } from './components/country/country-list/country-list.component';
 import {MatButtonModule} from '@angular/material/button';
 import { AustraliaComponent } from './components/country/oceania/australia/australia.component';
@@ -33,8 +31,6 @@ import {MatListModule} from '@angular/material/list';
     AppComponent,
     HeaderComponent,
     IntroductionComponent,
-    OceaniaComponent,
-    AsiaComponent,
     CountryListComponent,
     AustraliaComponent,
     PlaceListComponent,

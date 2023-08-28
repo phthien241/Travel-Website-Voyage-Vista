@@ -8,10 +8,11 @@ import { BehaviorSubject, Observable, Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService implements OnInit {
+  token: string;
   isAuthenticated(): Observable<boolean> {
     return this.isAuthenticatedSubject.asObservable();
   }
-  getUserEmail(): Observable<string>{
+  getUserEmail(): Observable<{email: string, userId: string, isAddData: boolean}>{
     return this.userEmail.asObservable();
   }
   constructor(private http: HttpClient, private router: Router, private jwtHelper: JwtHelperService) { }
@@ -19,20 +20,21 @@ export class AuthService implements OnInit {
   ngOnInit(): void {
   }
   private isAuthenticatedSubject = new BehaviorSubject<boolean>(!this.jwtHelper.isTokenExpired(localStorage.getItem("authToken")));
-  private userEmail = new Subject<string>();
+  private userEmail = new Subject<{email: string, userId: string, isAddData: boolean}>();
   userLogin(userData: { email: string, password: string }) {
     return this.http.post<
       {
-        message: unknown; email: string, password: string, userId: String, token: any
+        message: unknown; email: string, password: string, userId: string, token: any
       }>("http://localhost:3000/api/login", userData).subscribe({
         next: response => {
           localStorage.setItem("userEmail",userData.email);
           localStorage.setItem("authToken", response.token);
-          console.log(localStorage.getItem("userEmail"));
-          const token = localStorage.getItem("authToken");
-          this.userEmail.next(userData.email);
-          this.isAuthenticatedSubject.next(!this.jwtHelper.isTokenExpired(token));
-          this.router.navigate([response.userId + "/add"]);
+          localStorage.setItem("currentPage", "addData");
+          localStorage.setItem("userID", response.userId);
+          this.token = localStorage.getItem("authToken");
+          this.userEmail.next({email: userData.email, userId: response.userId, isAddData: true});
+          this.isAuthenticatedSubject.next(!this.jwtHelper.isTokenExpired(this.token));
+          this.router.navigate(["/add/user"+localStorage.userID]);
         },
         error: error => {
           console.log(error.error.message);
@@ -43,8 +45,13 @@ export class AuthService implements OnInit {
   userLogout(){
     localStorage.removeItem("authToken");
     localStorage.removeItem("userEmail");
+    localStorage.removeItem("userID");
+    this.isAuthenticatedSubject.next(false);
     this.router.navigate(['login']);
-    window.location.reload();
+  }
+
+  checkLoginStatus(){
+    this.isAuthenticatedSubject.next(!this.jwtHelper.isTokenExpired(this.token));
   }
 }
 

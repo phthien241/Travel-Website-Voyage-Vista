@@ -2,7 +2,6 @@ const express = require("express");
 const multer = require("multer");
 const Country = require("../models/country");
 const router = express.Router();
-const fs = require('fs');
 
 
 const storage = multer.memoryStorage({
@@ -33,7 +32,6 @@ router.get("/:continent",(req,res,next)=>{
 )
 
 router.post("/addCountry", upload.single("image"), (req,res)=>{
-    
     const {mimetype, buffer} = req.file;
     let country = new Country({
         name: req.body.name,
@@ -46,7 +44,7 @@ router.post("/addCountry", upload.single("image"), (req,res)=>{
     // country.description = req.body.description;
     // country.imagePath = req.file.path;
     country.save().then(result=>{
-        res.status(200).json({message: "haha"});
+        res.status(200).json({message:"Add country successfully"});
     })
 })
 

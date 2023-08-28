@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 
 const placeSchema = mongoose.Schema({
-    name: {type: String, required: true},
-    description: {type: String, required: true},
-    state: {type: String, required: true},
+    name: {type: String},
+    description: {type: String},
+    state: {type: String},
     type: {type: String},
-    imagePath: {type: String},
+    image: {data: Object, contentType: String},
     country: {type: String}
 })
 

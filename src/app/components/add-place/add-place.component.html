@@ -4,7 +4,7 @@
           Add Country
       </mat-panel-title>
   </mat-expansion-panel-header>
-  <form action="" #form = "ngForm" (ngSubmit)="onSubmit(form)">
+  <form action="" #form = "ngForm" (ngSubmit)="onSubmitCountry(form)">
       <mat-form-field>
           <mat-label>Name</mat-label>
           <input matInput name="name" ngModel>
@@ -32,7 +32,7 @@
           Add Place
       </mat-panel-title>
   </mat-expansion-panel-header>
-  <form action="" #form = "ngForm" (ngSubmit)="onSubmit(form)">
+  <form action="" #placeForm = "ngForm" (ngSubmit)="onSubmitPlace(placeForm)">
       <mat-form-field>
           <mat-label>Name</mat-label>
           <input matInput name="name" ngModel required>
@@ -57,6 +57,7 @@
           <mat-label>Description</mat-label>
           <textarea rows="5" matInput name="description" ngModel required></textarea>
       </mat-form-field>
+      <input type="file" name="image" (change)="onFileChange($event)" accept="image/*">
       <button mat-raised-button color="primary" type="submit">Submit</button>
   </form>
 </mat-expansion-panel>

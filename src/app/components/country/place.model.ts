@@ -4,6 +4,6 @@ export interface Place{
     description: string;
     state: string;
     type: string;
-    imagePath: string;
+    image: string;
     country: string;
 }

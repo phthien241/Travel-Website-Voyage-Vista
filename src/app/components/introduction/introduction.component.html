@@ -7,7 +7,7 @@
                     <br>
                     <span class="heading-primary-sub">Your Window to the World's Wonders</span>
                 </h1>
-                <a href="#" class="btn btn-white btn-animated">discover with us</a>
+                <a href="#" (click)="smoothScroll($event, 'target')" class="btn btn-white btn-animated">discover with us</a>
             </div>
         </div>
         <main>
@@ -97,7 +97,7 @@
 
             </section>
             <section class="section-continents">
-                <div class="wrap">
+                <div id="target" class="wrap">
                     <h2 class="heading-secondary">
                         Where do you want to go?
                     </h2>

@@ -7,13 +7,14 @@ import { LoginComponent } from './components/login/login.component';
 import { authGuard } from './components/login/auth.guard';
 import { AddPlaceComponent } from './components/add-place/add-place.component';
 import { InformationComponent } from './components/information/information.component';
+import { loginGuard } from './components/login/login.guard';
 
 
 const routes: Routes = [
   {path:'',component: IntroductionComponent},
-  {path:'login',component: LoginComponent},
-  {path:":userId/add", component: AddPlaceComponent, canActivate:[authGuard]},
-  {path:":userId/information", component: InformationComponent, canActivate:[authGuard]},
+  {path:'login',component: LoginComponent, canActivate:[loginGuard]},
+  {path:"add/:userId", component: AddPlaceComponent, canActivate:[authGuard]},
+  {path:"information/:userId", component: InformationComponent, canActivate:[authGuard]},
   {path:":continent", component: CountryListComponent},
   {path:":continent/:country", component: AustraliaComponent},
 ];

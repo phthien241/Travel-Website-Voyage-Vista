@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { InformationService } from './information.service';
 import { Information } from './information.model';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../login/auth.service';
 
 @Component({
   selector: 'app-information',
@@ -8,8 +10,9 @@ import { Information } from './information.model';
   styleUrls: ['./information.component.scss']
 })
 export class InformationComponent implements OnInit {
+
   information: Information[] = [];
-  constructor(private informationService: InformationService){}
+  constructor(private authService: AuthService,private informationService: InformationService, private route: ActivatedRoute, private router: Router){}
 
   ngOnInit(): void {
     this.informationService.getInformation();

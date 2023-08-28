@@ -20,7 +20,7 @@ export class PlaceService {
             description: place.description,
             state: place.state,
             type: place.type,
-            imagePath: place.imagePath,
+            image: place.image,
             country: place.country,
           }
         })
