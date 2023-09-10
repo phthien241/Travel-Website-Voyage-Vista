@@ -1,4 +1,8 @@
 <div class="container">
+    <div *ngIf="isLoading" class="spinner">
+        <mat-spinner></mat-spinner>
+        <h2>Please wait...</h2>
+    </div>
     <div *ngFor="let country of countries">
         <div class="country-list">
             <img [src]= "'data:' + country.image.contentType + ';base64,' + country.image.data" alt="">

@@ -10,6 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./country-list.component.scss']
 })
 export class CountryListComponent implements OnInit {
+  isLoading = true;
   countries: Country[] = [];
   private countriesSub: Subscription;
   constructor(private router: Router ,private route: ActivatedRoute, private countriesService: CountryService){}
@@ -21,6 +22,7 @@ export class CountryListComponent implements OnInit {
     
     this.countriesSub = this.countriesService.getCountriesUpdateListener()
     .subscribe((countries: Country[])=>{
+      this.isLoading = false;
       this.countries = countries;
     })
   }

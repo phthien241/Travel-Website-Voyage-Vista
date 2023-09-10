@@ -23,3 +23,14 @@ router.post("", (req,res,next)=>{
 })
 
 module.exports = router
+
+router.post("", (req,res,next)=>{
+    const {email, password} = req.body;
+    User.findOne({email,password}).then(userValid=>{
+        if(userValid){
+            res.status(200).json({message: "Login Successfully"});
+        }else{
+            res.status(401).json({message: "Email or Password is incorrect"});
+        }
+    });
+})

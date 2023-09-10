@@ -34,5 +34,15 @@ img:hover{
 }
 hr{
     color: red;
-
+}
+.spinner{
+    mat-spinner{
+        margin: 0 auto;
+    }
+    width: fit-content;
+    margin: 5rem auto;
+    h2{
+        color: lightgray;
+        margin-top: 2rem;
+    }
 }

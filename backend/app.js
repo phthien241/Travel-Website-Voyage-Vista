@@ -6,10 +6,11 @@ const countriesRoutes = require("./routes/countries");
 const placesRoutes = require("./routes/places")
 const informationRoutes = require("./routes/information")
 const userRoutes = require("./routes/user");
+const testRoutes = require("./routes/test")
 const cors = require("cors");
 
 const app = express();
-mongoose.connect("mongodb+srv://kurrwin1:Thapdienmaiphuc241!@cluster0.uqwplwt.mongodb.net/travel?retryWrites=true&w=majority")
+mongoose.connect("MongoDB URL");
 .then(()=>console.log("Connect to database"))
 .catch(()=>console.log("Connection failed"));
 
@@ -34,4 +35,5 @@ app.use((req, res, next) => {
   app.use("/api/continents", placesRoutes);
   app.use("/api/information", informationRoutes)
   app.use("/api/login", userRoutes)
+  app.use("api/test",testRoutes)
   module.exports = app;

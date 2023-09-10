@@ -24,6 +24,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatMenuModule} from '@angular/material/menu'
 import { JwtHelperService, JWT_OPTIONS  } from '@auth0/angular-jwt';
 import {MatListModule} from '@angular/material/list';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -54,7 +55,7 @@ import {MatListModule} from '@angular/material/list';
     MatExpansionModule,
     MatMenuModule,
     MatListModule,
-    
+    MatProgressSpinnerModule
   ],
   providers: [
     { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },
