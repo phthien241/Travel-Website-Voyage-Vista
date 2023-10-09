@@ -1,27 +1,51 @@
 # VoyageVista
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+Welcome to the Traveling Website repository! This is a place for everyone who loves to travel. Here, you can find, plan, and share your travel stories and adventures.
 
-## Development server
+# Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Admin Management Tools:
 
-## Code scaffolding
+- Tourist Attraction & Places: Admins can add, update, or remove tourist attractions and interesting spots.
+- Customer Information: Admins have tools to handle and manage customer information.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Authentication for Admin:
 
-## Build
+- Login & Logout: Secure and straightforward.
+- Auto Login & Auto Logout: For convenience and security, admins will be remembered upon returning to the site. However, for safety, the session will expire after a period of inactivity.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## User Experience:
 
-## Running unit tests
+- Tourist Attractions & Countries: Users can browse and explore details about different tourist attractions and countries, making it easier to plan their next adventure.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Tech Stack & Libraries
+This project is built using a combination of popular libraries and middlewares:
 
-## Running end-to-end tests
+- Express.js: Fast, unopinionated web application framework.
+- Mongoose: Elegant MongoDB object modeling for Node.js.
+- body-parser: Middleware to parse incoming request bodies.
+- cors: Middleware to enable CORS with various options.
+- multer: Middleware for handling multipart/form-data, which is primarily used for uploading files.
+- jsonwebtoken (JWT): An implementation of JSON Web Tokens.
+- crypto: Provides cryptographic functionality for secure data handling.
+- Bootstrap: Responsive front-end framework.
+- Angular Material: simple front-end interface for admin management.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+# Getting Started
+## Clone the Repository:
+- git clone https://github.com/phthien241/Travel-Website-Voyage-Vista
+- cd Travel-Website-Voyage-Vista
+## Install Dependencies:
+- npm install
+## Configuration:
+- Ensure to put your MongoDB link for the database.
+## Start the Application:
+- run node server.js
+- run ng serve
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Demo
+![Hero Section](images/screenshot1.png)
+![List of continents](images/screenshot2.png)
+![List countries in Europe](images/screenshot3.png)
+

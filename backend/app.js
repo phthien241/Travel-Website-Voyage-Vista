@@ -10,7 +10,7 @@ const testRoutes = require("./routes/test")
 const cors = require("cors");
 
 const app = express();
-mongoose.connect("MongoDB URL");
+mongoose.connect("MongoDB URL")
 .then(()=>console.log("Connect to database"))
 .catch(()=>console.log("Connection failed"));
 
