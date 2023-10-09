@@ -19,7 +19,7 @@ Welcome to the Traveling Website repository! This is a place for everyone who lo
 - Tourist Attractions & Countries: Users can browse and explore details about different tourist attractions and countries, making it easier to plan their next adventure.
 
 # Tech Stack & Libraries
-This project is built using a combination of popular libraries and middlewares:
+This project is built using Angular, Bootstrap, Node.js, MongoDB and a combination of popular libraries and middlewares:
 
 - Express.js: Fast, unopinionated web application framework.
 - Mongoose: Elegant MongoDB object modeling for Node.js.
