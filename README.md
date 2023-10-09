@@ -35,7 +35,7 @@ This project is built using Angular, Bootstrap, Node.js, MongoDB and a combinati
 # Getting Started
 ## Clone the Repository:
 - git clone https://github.com/phthien241/Travel-Website-Voyage-Vista
-- cd Travel-Website-Voyage-Vista
+- cd Restaurant-TavolaItaliano
 ## Install Dependencies:
 - npm install
 ## Configuration:
